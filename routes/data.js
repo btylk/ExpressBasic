@@ -6,7 +6,7 @@ router.get('/', function(req, res, next){
 });
 
 router.get('/add', function(req, res, next){
-    res.send('Add more data');
+    res.render('addData');
 });
 
 module.exports = router;
