@@ -2,6 +2,7 @@
 <html>
   <head>
     <title></title>
+    <script src="https://cdn.ckeditor.com/4.16.1/standard/ckeditor.js"></script>
   </head>
   <body>
     <%- include layout %>
@@ -16,6 +17,9 @@
           <div class="form-group">
             <label for="">Details</label>
             <textarea name="Details" rows="8" cols="80" class="form-control"></textarea>
+            <script>
+              CKEDITOR.replace( 'Details' );
+            </script>
         </div>
         <br>
         <input type="submit" name="" value="Save" class="btn btn-primary">
