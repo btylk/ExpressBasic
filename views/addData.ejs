@@ -8,6 +8,7 @@
     <%- include layout %>
     <div class="container">
       <h1 align="center">Add information</h1>
+      <%- messages() %>
       <% if(locals.errors) { %>
       <ul class="alert alert-danger">
         <% Object.values(errors).forEach(function(error){ %>
@@ -31,6 +32,9 @@
             class="form-control"
           ></textarea>
           <script>
+            $(function(){
+              $('#messages').addClass('alert alert-success');
+            })
             CKEDITOR.replace("Details");
           </script>
         </div>
